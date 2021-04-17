@@ -1,4 +1,4 @@
-import TelegramBot from "node-telegram-bot-api";
+import TelegramBot = require("node-telegram-bot-api");
 import Binance, { DailyStatsResult } from 'binance-api-node';
 import ENV from "./config";
 

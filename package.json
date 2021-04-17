@@ -24,6 +24,7 @@
   "homepage": "https://github.com/ramyx/cripto-b-alert#readme",
   "dependencies": {
     "binance-api-node": "^0.10.39",
+    "dotenv": "^8.2.0",
     "node-telegram-bot-api": "^0.52.0"
   },
   "devDependencies": {

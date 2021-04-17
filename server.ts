@@ -3,7 +3,7 @@ import Binance from 'binance-api-node';
 
 const BOT_TOKEN = process.env.BOT_TOKEN;
 
-const bot = new TelegramBot(BOT_TOKEN);
+const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 
 bot.on('message', (msg) => {
     console.log(msg);

@@ -39,8 +39,9 @@ bot.onText(/\/tothemoon/, async (msg) => {
         if (ds.symbol.search('BUSD') !== -1) {
             if (parseFloat(ds.priceChangePercent) > changePercent) {
                 console.log(ds);
+                const alarmIcon = '🚨'.repeat(parseInt(ds.priceChangePercent));
                 const msgToSend = 
-                `*Symbol ${ds.symbol}*\nPrice \$${ds.lastPrice}\nQuantity ${ds.lastQty}\nPrice change percent ${ds.priceChangePercent}%`
+                `*Symbol ${ds.symbol}*\n${alarmIcon}\nPrice \$${ds.lastPrice}\nQuantity ${ds.lastQty}\nPrice change percent ${ds.priceChangePercent}%`
                 console.log('msgToSend', msgToSend);
                 
                 bot.sendMessage(msg.chat.id, msgToSend, { parse_mode: "Markdown" })
